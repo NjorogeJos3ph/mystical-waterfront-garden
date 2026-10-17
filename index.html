@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mystical Waterfront Garden | Event garden on the dam, Ruiru</title>
+<meta name="description" content="A garden venue on the dam at Mugutha, Ruiru, for weddings, graduations, team days and picnics. Plan your day and send the details on WhatsApp.">
+<meta name="theme-color" content="#0d2528">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mystical Waterfront Garden">
+<meta property="og:description" content="Lawn, trees and a calm dam in Mugutha, Ruiru. Plan your day and ask the venue on WhatsApp.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d2528'/%3E%3Ccircle cx='16' cy='14' r='6' fill='%23f2a93b'/%3E%3Cpath d='M4 21h24v7H4z' fill='%232c8791'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+/* Mystical Waterfront Garden — concept site
+   Palette: dam-deep green, lantern amber, lake teal, leaf green, cool mist. */
+
+:root {
+  --deep: #0d2528;
+  --deep-2: #153b40;
+  --mist: #e7efea;
+  --ink: #0d2528;
+  --muted: #45625f;
+  --water: #2c8791;
+  --lantern: #f2a93b;
+  --lantern-ink: #2a1a00;
+  --leaf: #2f6b4a;
+  --on-deep: #eaf3ef;
+  --on-deep-muted: #a9c2bd;
+  --gutter: clamp(1.1rem, 4.5vw, 3rem);
+  --display: "Young Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+:focus-visible { outline: 3px solid var(--lantern); outline-offset: 3px; }
+
+/* ---------- Concept ribbon ---------- */
+.ribbon {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .55rem var(--gutter);
+  background: var(--deep); color: var(--on-deep-muted);
+  font-size: .875rem; line-height: 1.35;
+}
+.ribbon[hidden] { display: none; }
+.ribbon button {
+  flex: none; background: none; border: 1px solid rgba(234,243,239,.3); color: var(--on-deep);
+  border-radius: 999px; padding: .3rem .8rem; font: inherit; cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; overflow: hidden; color: #fff; background: var(--deep);
+  height: clamp(540px, 78svh, 820px);
+}
+/* The scene stops where the planner card begins, so nothing is hidden under it. */
+#scene { position: absolute; top: 0; left: 0; right: 0; bottom: 3.25rem; width: 100%; height: calc(100% - 3.25rem); display: block; }
+.scrim {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(5,20,24,.55) 0%, rgba(5,20,24,.12) 42%, rgba(5,20,24,0) 60%);
+}
+.nav {
+  position: absolute; top: 1rem; right: var(--gutter);
+  display: flex; align-items: center; gap: 1.25rem; font-weight: 500; font-size: .98rem;
+}
+.nav a { text-decoration: none; text-shadow: 0 1px 10px rgba(0,0,0,.35); }
+.nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.nav .pill {
+  background: var(--lantern); color: var(--lantern-ink); text-shadow: none;
+  padding: .55rem 1rem; border-radius: 999px; font-weight: 700;
+}
+.nav .pill:hover { text-decoration: none; filter: brightness(1.06); }
+.hero-copy {
+  position: absolute; left: var(--gutter); right: var(--gutter);
+  top: clamp(4.2rem, 11vh, 7rem); max-width: 46rem;
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: .96; letter-spacing: -.015em;
+  text-shadow: 0 2px 28px rgba(0,0,0,.28);
+}
+.lede {
+  margin-top: 1.1rem; max-width: 26ch;
+  font-size: clamp(1.08rem, 2.4vw, 1.4rem); line-height: 1.4;
+  text-shadow: 0 1px 14px rgba(0,0,0,.4);
+}
+
+/* ---------- Scene (SVG) ---------- */
+.stop-s1 { stop-color: var(--s1); } .stop-s2 { stop-color: var(--s2); } .stop-s3 { stop-color: var(--s3); }
+.stop-w1 { stop-color: var(--w1); } .stop-w2 { stop-color: var(--w2); }
+.stop-l1 { stop-color: var(--lawn); } .stop-l2 { stop-color: var(--lawn2); }
+.stop-sun { stop-color: var(--sun); }
+.f-h1 { fill: var(--h1); } .f-h2 { fill: var(--h2); }
+.f-tree { fill: var(--tree); } .s-tree { stroke: var(--tree); }
+.f-cloud { fill: var(--cloud); }
+.f-sun { fill: var(--sun); }
+
+.cloud { animation: drift 80s ease-in-out infinite alternate; }
+.reed { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 5s ease-in-out infinite; animation-delay: var(--d, 0s); }
+.glint { transform-box: fill-box; transform-origin: center; animation: shimmer 3.2s ease-in-out infinite; animation-delay: var(--d, 0s); }
+.ripple { transform-box: fill-box; transform-origin: center; animation: ripple 7s ease-out infinite; animation-delay: var(--d, 0s); }
+.tw { animation: twinkle 3.4s ease-in-out infinite; animation-delay: var(--d, 0s); }
+.sc-boat { transition: transform 2.8s cubic-bezier(.45, .05, .25, 1); }
+.boat-bob { animation: bob 4.2s ease-in-out infinite; }
+.prop { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.prop.on { opacity: 1; transform: none; }
+
+@keyframes drift   { from { transform: translateX(-70px); } to { transform: translateX(70px); } }
+@keyframes sway    { 0%, 100% { transform: rotate(-2.2deg); } 50% { transform: rotate(2.6deg); } }
+@keyframes shimmer { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(.55); } }
+@keyframes ripple  { 0% { transform: scale(.5); opacity: 0; } 25% { opacity: .55; } 100% { transform: scale(1.5); opacity: 0; } }
+@keyframes twinkle { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+@keyframes bob     { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(2.5px); } }
+
+/* ---------- Planner ---------- */
+.planner {
+  position: relative; z-index: 2;
+  width: min(1120px, calc(100% - 2 * var(--gutter)));
+  margin: -3.25rem auto 0;
+  padding: clamp(1.4rem, 4vw, 2.6rem);
+  background: var(--deep); color: var(--on-deep);
+  border-radius: 22px;
+  box-shadow: 0 30px 60px -30px rgba(5,20,24,.6);
+}
+.planner-head h2 { font-size: clamp(1.7rem, 4.2vw, 2.6rem); line-height: 1.05; }
+.planner-head p { margin-top: .7rem; max-width: 56ch; color: var(--on-deep-muted); }
+.planner-form { display: grid; gap: 1.8rem; margin-top: 1.8rem; }
+@media (min-width: 880px) { .planner-form { grid-template-columns: 1.15fr 1fr; gap: 3rem; } }
+.col { display: grid; gap: 1.5rem; align-content: start; }
+
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+legend, label { font-weight: 500; }
+legend { padding: 0; margin-bottom: .7rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .55rem; }
+.chip { position: relative; }
+.chip input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.chip span {
+  display: inline-block; padding: .62rem 1rem; border-radius: 999px;
+  border: 1.5px solid rgba(234,243,239,.3); font-weight: 500;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.chip:hover span { border-color: rgba(234,243,239,.65); }
+.chip input:checked + span { background: var(--lantern); border-color: var(--lantern); color: var(--lantern-ink); }
+.chip input:focus-visible + span { outline: 3px solid #fff; outline-offset: 3px; }
+
+.field-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+output { font-weight: 700; color: var(--lantern); font-variant-numeric: tabular-nums; }
+.mood { margin-top: .15rem; font-size: .93rem; color: var(--on-deep-muted); line-height: 1.45; }
+
+input[type=range] {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 34px; margin: .25rem 0 0; background: transparent; cursor: pointer;
+}
+input[type=range]::-webkit-slider-runnable-track { height: 10px; border-radius: 6px; background: var(--track, #2f6b4a); }
+input[type=range]::-moz-range-track { height: 10px; border-radius: 6px; background: var(--track, #2f6b4a); }
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 30px; height: 30px; margin-top: -10px; border-radius: 50%;
+  background: var(--lantern); border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.45);
+}
+input[type=range]::-moz-range-thumb {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--lantern); border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.45);
+}
+#guests { --track: linear-gradient(90deg, #2f6b4a, #58a95a); }
+
+.check { display: flex; align-items: center; gap: .7rem; cursor: pointer; }
+.check input { width: 22px; height: 22px; accent-color: var(--lantern); margin: 0; }
+
+input.text {
+  width: 100%; margin-top: .4rem; padding: .75rem .9rem;
+  background: rgba(234,243,239,.08); color: var(--on-deep);
+  border: 1.5px solid rgba(234,243,239,.28); border-radius: 12px;
+  font: inherit; color-scheme: dark;
+}
+input.text::placeholder { color: var(--on-deep-muted); opacity: .8; }
+
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.4rem; margin-top: .3rem; }
+.btn {
+  display: inline-block; padding: .95rem 1.4rem; border-radius: 12px; border: 0; cursor: pointer;
+  background: var(--lantern); color: var(--lantern-ink);
+  font: 700 1rem/1.2 var(--body); text-decoration: none;
+  transition: filter .2s, transform .15s;
+}
+.btn:hover { filter: brightness(1.07); }
+.btn:active { transform: translateY(1px); }
+.linkbtn {
+  background: none; border: 0; padding: .3rem 0; cursor: pointer;
+  font: 500 1rem var(--body); color: inherit; text-decoration: underline; text-underline-offset: 4px;
+}
+.preview {
+  font-size: .9rem; line-height: 1.5; color: var(--on-deep-muted);
+  border-left: 3px solid var(--water); padding-left: .8rem;
+}
+.fine { font-size: .85rem; color: var(--on-deep-muted); }
+
+/* ---------- Content sections ---------- */
+section.grounds, section.uses, section.visit {
+  width: min(1120px, calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}
+.grounds { padding: clamp(3.5rem, 9vw, 6.5rem) 0 clamp(2rem, 5vw, 3rem); }
+.grounds h2 { font-size: clamp(1.9rem, 4.6vw, 3.1rem); line-height: 1.06; max-width: 22ch; }
+.grounds-grid { display: grid; gap: 2rem; margin-top: 2.4rem; }
+.grounds-grid h3 { font-size: 1.4rem; line-height: 1.15; margin-bottom: .5rem; }
+.grounds-grid p { color: var(--muted); max-width: 38ch; }
+@media (min-width: 820px) {
+  .grounds-grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; align-items: start; }
+  .grounds-grid > :nth-child(2) { margin-top: 2.5rem; }
+  .grounds-grid > :nth-child(3) { margin-top: 5rem; }
+}
+
+.uses { padding: clamp(2rem, 6vw, 4rem) 0 clamp(3rem, 8vw, 5.5rem); }
+.big {
+  font-family: var(--display); font-size: clamp(1.7rem, 4.6vw, 3.1rem); line-height: 1.18;
+  color: var(--leaf); max-width: 28ch; text-wrap: pretty;
+}
+.after { margin-top: 1.4rem; font-size: 1.05rem; color: var(--muted); }
+.after a { color: var(--ink); font-weight: 500; text-underline-offset: 4px; }
+
+.boat {
+  background: var(--deep-2); color: var(--on-deep);
+  padding: clamp(3rem, 8vw, 5.5rem) var(--gutter);
+}
+.boat-inner { width: min(1120px, 100%); margin-inline: auto; }
+.boat h2 { font-size: clamp(1.9rem, 4.6vw, 3.1rem); line-height: 1.06; max-width: 18ch; }
+.boat p { margin: 1rem 0 1.6rem; max-width: 44ch; color: var(--on-deep-muted); }
+
+.visit {
+  display: grid; gap: 2.2rem; padding: clamp(3.5rem, 9vw, 6rem) 0;
+}
+@media (min-width: 860px) { .visit { grid-template-columns: 1fr 1.1fr; gap: 3.5rem; align-items: start; } }
+.visit h2 { font-size: clamp(1.9rem, 4.6vw, 3.1rem); line-height: 1.06; }
+.visit dl { margin: 1.6rem 0 0; display: grid; gap: 1.1rem; }
+.visit dt { font-weight: 700; }
+.visit dd { margin: .1rem 0 0; color: var(--muted); max-width: 40ch; }
+.visit dd a { color: var(--ink); text-underline-offset: 4px; }
+.visit .btn { color: var(--lantern-ink); }
+.visit .linkbtn { color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.4rem; margin-top: 1.8rem; }
+.visit-map { aspect-ratio: 4 / 3.2; border-radius: 18px; overflow: hidden; background: #cfdcd5; }
+.visit-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+footer { background: var(--deep); color: var(--on-deep-muted); padding: 1.6rem var(--gutter); font-size: .9rem; }
+footer p { width: min(1120px, 100%); margin-inline: auto; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="ribbon" id="ribbon" role="note">
+  <p>Concept site, made for the venue to review. Hours, rates and photos will be confirmed with you before it goes live.</p>
+  <button type="button" id="ribbonClose">Dismiss</button>
+</div>
+
+<header class="hero" id="top">
+  <svg id="scene" role="img" aria-label="Illustration of the garden and the dam" preserveAspectRatio="xMidYMid slice"></svg>
+  <div class="scrim"></div>
+  <nav class="nav" aria-label="Page">
+    <a href="#visit">Find us</a>
+    <a class="pill" href="https://wa.me/254751917911" data-wa>Ask on WhatsApp</a>
+  </nav>
+  <div class="hero-copy">
+    <h1>Mystical Waterfront Garden</h1>
+    <p class="lede">A garden where the lawn runs down to the dam. Mugutha, Ruiru.</p>
+  </div>
+</header>
+
+<main>
+
+  <section class="planner" id="plan" aria-labelledby="plan-h">
+    <div class="planner-head">
+      <h2 id="plan-h">Plan your day on the dam</h2>
+      <p>Choose what you are celebrating and when. The garden above changes to match, and your plan goes to the venue as a WhatsApp message.</p>
+    </div>
+
+    <form class="planner-form" id="planForm" novalidate>
+      <div class="col">
+        <fieldset class="occasion">
+          <legend>What are you planning?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="occasion" value="wedding" checked><span>Wedding</span></label>
+            <label class="chip"><input type="radio" name="occasion" value="party"><span>Party or graduation</span></label>
+            <label class="chip"><input type="radio" name="occasion" value="corporate"><span>Corporate or team day</span></label>
+            <label class="chip"><input type="radio" name="occasion" value="picnic"><span>Picnic or photoshoot</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <div class="field-row"><label for="time">Time of day</label><output id="timeOut" for="time"></output></div>
+          <input type="range" id="time" min="6" max="22" step="0.25" value="7">
+          <p class="mood" id="mood"></p>
+        </div>
+
+        <div class="field">
+          <div class="field-row"><label for="guests">Guests</label><output id="guestsOut" for="guests"></output></div>
+          <input type="range" id="guests" min="10" max="600" step="10" value="150">
+          <p class="mood">The venue lists room for up to 600.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="field">
+          <label class="check"><input type="checkbox" id="boat"><span>Guests arrive by boat</span></label>
+          <p class="mood">The dam is part of the venue. Boat arrival is an add-on, so ask about your date.</p>
+        </div>
+
+        <div class="field">
+          <label for="date">Date, if you know it</label>
+          <input type="date" id="date" class="text">
+        </div>
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" class="text" autocomplete="given-name" placeholder="So the venue knows who to reply to">
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" id="send" href="https://wa.me/254751917911" target="_blank" rel="noopener">Send this plan on WhatsApp</a>
+          <button type="button" class="linkbtn" id="copy">Copy message</button>
+        </div>
+        <p class="preview" id="preview"></p>
+        <p class="fine">The scene is an illustration, not a photo of the venue.</p>
+      </div>
+    </form>
+  </section>
+
+  <section class="grounds" aria-labelledby="grounds-h">
+    <h2 id="grounds-h">Room to spread out, quiet enough to hear the water</h2>
+    <div class="grounds-grid">
+      <div>
+        <h3>Lawn to the water's edge</h3>
+        <p>Wide green lawns run down to the dam, with shaded paths under mature trees. Hold the ceremony on the waterfront and the reception under the trees.</p>
+      </div>
+      <div>
+        <h3>Set back from the highway</h3>
+        <p>The garden is just off Thika Superhighway at Exit 13, but the grounds sit away from the road, so the noise stays behind you.</p>
+      </div>
+      <div>
+        <h3>Space for the whole guest list</h3>
+        <p>From a small birthday to about 600 guests, the same lawn works. Move the guest slider above and see how the garden fills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="uses" aria-labelledby="uses-h">
+    <h2 id="uses-h" class="sr">What the garden is used for</h2>
+    <p class="big">Wedding receptions. Graduation parties. Corporate team building. Church workshops. Photoshoots. Picnics by the water. Quiet dates at the end of the day.</p>
+    <p class="after">Something else in mind? <a href="https://wa.me/254751917911" data-wa>Ask the venue</a>.</p>
+  </section>
+
+  <section class="boat" aria-labelledby="boat-h">
+    <div class="boat-inner">
+      <h2 id="boat-h">The dam is part of the venue</h2>
+      <p>Hosts can have guests or the bridal party arrive by boat. It is an add-on, so ask about availability for your date.</p>
+      <button type="button" class="btn" id="seeBoat">Bring the boat into the scene</button>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="visit-info">
+      <h2 id="visit-h">Find the garden</h2>
+      <dl>
+        <dt>Where</dt>
+        <dd>Dam Road, Mugutha, Ruiru. Off Thika Superhighway, Exit 13.</dd>
+        <dt>Phone</dt>
+        <dd><a href="tel:+254751917911">0751 917 911</a></dd>
+        <dt>Hours and rates</dt>
+        <dd>Ask on WhatsApp for current opening hours and hire rates for your event.</dd>
+        <dt>Instagram</dt>
+        <dd><a href="https://www.instagram.com/mystical_waterfront_garden/" target="_blank" rel="noopener">@mystical_waterfront_garden</a></dd>
+      </dl>
+      <p class="actions">
+        <a class="btn" href="https://wa.me/254751917911" data-wa target="_blank" rel="noopener">Message on WhatsApp</a>
+        <a class="linkbtn" href="https://www.google.com/maps/search/?api=1&amp;query=Mystical+Waterfront+Garden+Mugutha+Ruiru" target="_blank" rel="noopener">Open in Google Maps</a>
+      </p>
+    </div>
+    <div class="visit-map">
+      <iframe title="Map showing Mystical Waterfront Garden in Mugutha, Ruiru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Mystical+Waterfront+Garden+Mugutha+Ruiru&amp;output=embed"></iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>A free concept site made for Mystical Waterfront Garden. It is not yet the venue's official website.</p>
+</footer>
+
+<script>
+/* Mystical Waterfront Garden — concept site
+   One illustrated scene of the garden that changes with the time of day, the
+   occasion, the guest count and boat arrival. The same choices become a
+   WhatsApp message to the venue. Plain JavaScript, no libraries. */
+(() => {
+  'use strict';
+
+  /* ---------- Edit these ---------- */
+  const VENUE = {
+    name: 'Mystical Waterfront Garden',
+    whatsapp: '254751917911', // international format, no + or spaces
+  };
+
+  const OCCASIONS = {
+    wedding:   { label: 'wedding' },
+    party:     { label: 'party or graduation' },
+    corporate: { label: 'corporate or team-building day' },
+    picnic:    { label: 'picnic or photoshoot' },
+  };
+
+  /* ---------- Colour keyframes across the day ---------- */
+  const K = [
+    { h: 6,    s1: '#1a2350', s2: '#7a5a8c', s3: '#f0a67a', w1: '#8d7a9c', w2: '#2a3358', h1: '#4a4c7a', h2: '#2f3a5c', lawn: '#2f5a46', tree: '#1a2a3a', cloud: '#f3b9a0', sun: '#ffc58a', lights: 0.5, stars: 0.5, night: 0.6 },
+    { h: 7.5,  s1: '#5b9bd0', s2: '#a8d0e6', s3: '#fde5c0', w1: '#8fc0cf', w2: '#3d8596', h1: '#7ea1b0', h2: '#4f7d6c', lawn: '#4e9055', tree: '#24472f', cloud: '#ffffff', sun: '#fff0b8', lights: 0,   stars: 0,   night: 0 },
+    { h: 12,   s1: '#2f88cf', s2: '#6fbbe6', s3: '#d3eef8', w1: '#4fb0c4', w2: '#1e7088', h1: '#6c9aa0', h2: '#3f7a56', lawn: '#58a95a', tree: '#1f4a2c', cloud: '#ffffff', sun: '#fffbe8', lights: 0,   stars: 0,   night: 0 },
+    { h: 16.5, s1: '#4f86c6', s2: '#9cc4e0', s3: '#fbe0a8', w1: '#6fb0bf', w2: '#2f7288', h1: '#7a8fa5', h2: '#45774f', lawn: '#4f9a52', tree: '#233f2c', cloud: '#fff1d6', sun: '#ffdc8a', lights: 0.1, stars: 0,   night: 0 },
+    { h: 18.3, s1: '#3a3f86', s2: '#e8715e', s3: '#ffc26a', w1: '#f08a60', w2: '#3b3768', h1: '#6a4a78', h2: '#3b3a5e', lawn: '#3d6b46', tree: '#1c2438', cloud: '#ffb08a', sun: '#ff8a4a', lights: 0.75, stars: 0.1, night: 0.35 },
+    { h: 19.6, s1: '#171c4a', s2: '#3a2f6a', s3: '#a85a7e', w1: '#4a3a74', w2: '#171c45', h1: '#2c2a5c', h2: '#1d2144', lawn: '#244636', tree: '#10162c', cloud: '#6a4a86', sun: '#ff6a4a', lights: 1,   stars: 0.6, night: 0.85 },
+    { h: 22,   s1: '#070b22', s2: '#10163a', s3: '#202658', w1: '#141a42', w2: '#060920', h1: '#12163a', h2: '#0c1130', lawn: '#14302a', tree: '#080d1e', cloud: '#2a3366', sun: '#ff6a4a', lights: 1,   stars: 1,   night: 1 },
+  ];
+
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const hex2rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+  const rgb2hex = (a) => '#' + a.map((v) => Math.round(v).toString(16).padStart(2, '0')).join('');
+  const mix = (a, b, t) => { const A = hex2rgb(a), B = hex2rgb(b); return rgb2hex(A.map((v, i) => lerp(v, B[i], t))); };
+
+  function sample(h) {
+    h = clamp(h, K[0].h, K[K.length - 1].h);
+    let i = 0;
+    while (i < K.length - 2 && h > K[i + 1].h) i++;
+    const a = K[i], b = K[i + 1], t = (h - a.h) / (b.h - a.h), out = {};
+    for (const key in a) {
+      if (key === 'h') continue;
+      out[key] = typeof a[key] === 'string' ? mix(a[key], b[key], t) : lerp(a[key], b[key], t);
+    }
+    out.lawn2 = mix(out.lawn, out.tree, 0.55);
+    return out;
+  }
+
+  function mulberry32(a) {
+    return () => {
+      a |= 0; a = (a + 0x6d2b79f5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  /* ---------- State and elements ---------- */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const state = { hour: reduceMotion ? 17.9 : 7, occasion: 'wedding', guests: 150, boat: false };
+
+  const $ = (id) => document.getElementById(id);
+  const svg = $('scene');
+  const hero = $('top');
+  const el = {
+    time: $('time'), timeOut: $('timeOut'), mood: $('mood'),
+    guests: $('guests'), guestsOut: $('guestsOut'),
+    boat: $('boat'), date: $('date'), name: $('name'),
+    send: $('send'), copy: $('copy'), preview: $('preview'),
+    form: $('planForm'),
+  };
+
+  let VB = { x: 0, w: 1200 };
+  let parts = {};
+
+  function setView() {
+    const r = svg.getBoundingClientRect();
+    const aspect = r.width > 0 && r.height > 0 ? r.width / r.height : 1.6;
+    const w = clamp(760 * aspect, 400, 1700);
+    VB = { w, x: 600 - w / 2 };
+    svg.setAttribute('viewBox', `${VB.x.toFixed(1)} 0 ${w.toFixed(1)} 760`);
+  }
+
+  /* ---------- Scene drawing ---------- */
+  function treeline(x0, x1, base, seed) {
+    const r = mulberry32(seed);
+    let d = `M${x0} ${base + 40}L${x0} ${base}`;
+    let x = x0;
+    while (x < x1) {
+      const w = 14 + r() * 24, h = 6 + r() * 15;
+      d += `q${(w / 2).toFixed(1)} ${(-h).toFixed(1)} ${w.toFixed(1)} 0`;
+      x += w;
+    }
+    return d + `L${x1} ${base + 40}Z`;
+  }
+
+  function acacia(cx, base, s) {
+    return `<g transform="translate(${cx.toFixed(1)} ${base}) scale(${s.toFixed(3)})">
+      <path class="s-tree" fill="none" stroke-linecap="round" stroke-width="17" d="M0 0C-5 -55 -10 -105 -6 -150"/>
+      <path class="s-tree" fill="none" stroke-linecap="round" stroke-width="10" d="M-6 -150C-30 -168 -70 -178 -112 -174M-6 -150C20 -172 62 -184 108 -178M-3 -104C28 -126 48 -142 60 -168"/>
+      <ellipse class="f-tree" cx="-72" cy="-184" rx="122" ry="25"/>
+      <ellipse class="f-tree" cx="52" cy="-198" rx="152" ry="30"/>
+      <ellipse class="f-tree" cx="-4" cy="-170" rx="92" ry="19"/>
+      <ellipse class="f-tree" cx="-150" cy="-170" rx="52" ry="12"/>
+    </g>`;
+  }
+
+  function reeds(x, base, n, seed) {
+    const r = mulberry32(seed);
+    let out = `<g class="reed" style="--d:${(r() * -4).toFixed(2)}s">`;
+    for (let i = 0; i < n; i++) {
+      const h = 26 + r() * 34, lean = (r() - 0.5) * 16;
+      out += `<path class="s-tree" fill="none" stroke-width="2.2" stroke-linecap="round" d="M${(x + i * 5).toFixed(1)} ${base}q${(lean / 2).toFixed(1)} ${-h / 2} ${lean.toFixed(1)} ${-h.toFixed(1)}"/>`;
+    }
+    return out + '</g>';
+  }
+
+  function propWedding() {
+    let chairs = '';
+    for (let row = 0; row < 4; row++)
+      for (const side of [-1, 1])
+        for (let k = 0; k < 5; k++) {
+          const x = side * (30 + k * 19) - 6, y = 18 + row * 16;
+          chairs += `<rect x="${x}" y="${y}" width="12" height="12" rx="3" fill="#f4efe0" opacity=".9"/>`;
+        }
+    const cols = ['#f6b9c6', '#ffffff', '#f2a93b', '#f6b9c6', '#ffffff'];
+    let flowers = '';
+    for (let i = 0; i <= 14; i++) {
+      const t = i / 14, mt = 1 - t;
+      const x = mt * mt * -62 + 2 * mt * t * 0 + t * t * 62;
+      const y = mt * mt * -112 + 2 * mt * t * -188 + t * t * -112;
+      flowers += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${5 + (i % 3)}" fill="${cols[i % cols.length]}"/>`;
+    }
+    return `<g class="prop" id="p-wedding">${chairs}
+      <path class="s-tree" fill="none" stroke-width="7" stroke-linecap="round" d="M-62 0L-62 -112Q0 -188 62 -112L62 0"/>${flowers}</g>`;
+  }
+
+  function propParty() {
+    const cols = ['#f2a93b', '#2c8791', '#f6b9c6', '#ffffff', '#7bc07a'];
+    let flags = '';
+    for (let i = 0; i <= 12; i++) {
+      const t = i / 12, mt = 1 - t;
+      const x = mt * mt * -150 + 2 * mt * t * 0 + t * t * 150;
+      const y = mt * mt * -130 + 2 * mt * t * -82 + t * t * -130;
+      flags += `<path d="M${(x - 8).toFixed(1)} ${y.toFixed(1)}L${(x + 8).toFixed(1)} ${y.toFixed(1)}L${x.toFixed(1)} ${(y + 17).toFixed(1)}Z" fill="${cols[i % cols.length]}"/>`;
+    }
+    const balloons = [[-196, -92, '#f2a93b'], [-212, -118, '#f6b9c6'], [-180, -124, '#2c8791']]
+      .map(([x, y, c]) => `<line x1="${x}" y1="${y + 14}" x2="-190" y2="0" stroke="#fff" stroke-opacity=".6"/><circle cx="${x}" cy="${y}" r="14" fill="${c}"/>`).join('');
+    return `<g class="prop" id="p-party">
+      <line class="s-tree" stroke-width="4" x1="-150" y1="-132" x2="-150" y2="0"/><line class="s-tree" stroke-width="4" x1="150" y1="-132" x2="150" y2="0"/>
+      <path class="s-tree" fill="none" stroke-width="2" d="M-150 -130Q0 -82 150 -130"/>${flags}${balloons}
+      <rect class="f-tree" x="-44" y="-26" width="88" height="26" rx="3"/><circle cx="-24" cy="-13" r="7" fill="#fff" opacity=".7"/><circle cx="24" cy="-13" r="7" fill="#fff" opacity=".7"/></g>`;
+  }
+
+  function propCorporate() {
+    return `<g class="prop" id="p-corporate">
+      <rect x="-120" y="-64" width="240" height="64" fill="#dde6e1"/>
+      <rect class="f-tree" x="-62" y="-58" width="124" height="58" opacity=".85"/>
+      <path d="M-128 -62L0 -138L128 -62Z" fill="#f4efe0"/>
+      <path d="M-64 -100L0 -138L64 -100Z" fill="#2c8791" opacity=".85"/>
+      <line class="s-tree" stroke-width="3" x1="0" y1="-138" x2="0" y2="-172"/><path d="M0 -172L26 -164L0 -156Z" fill="#f2a93b"/>
+      <rect x="-90" y="-22" width="22" height="22" rx="2" fill="#f4efe0" opacity=".9"/><rect x="68" y="-22" width="22" height="22" rx="2" fill="#f4efe0" opacity=".9"/></g>`;
+  }
+
+  function propPicnic() {
+    let stripes = '';
+    for (let i = -3; i <= 3; i++) stripes += `<line x1="${i * 26}" y1="-6" x2="${i * 35}" y2="26" stroke="#fff" stroke-opacity=".55" stroke-width="7"/>`;
+    return `<g class="prop" id="p-picnic">
+      <polygon points="-90,-6 90,-6 124,26 -124,26" fill="#e0675a"/>${stripes}
+      <rect x="-34" y="-26" width="40" height="22" rx="4" fill="#b9854a"/>
+      <path d="M-28 -26Q-14 -46 0 -26" fill="none" stroke="#b9854a" stroke-width="3"/>
+      <circle cx="42" cy="-6" r="7" fill="#fff" opacity=".9"/><circle cx="62" cy="2" r="7" fill="#f2a93b"/></g>`;
+  }
+
+  function buildScene() {
+    const r = mulberry32(11);
+    const L = -700, R = 1900;
+
+    let stars = '';
+    for (let i = 0; i < 90; i++) {
+      const x = VB.x + r() * VB.w, y = 10 + r() * 300, rad = 0.8 + r() * 1.5;
+      stars += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${rad.toFixed(1)}" fill="#fff"${i % 4 === 0 ? ` class="tw" style="--d:${(r() * -3).toFixed(1)}s"` : ''}/>`;
+    }
+
+    const cloud = (x, y, s, dly) => `<g class="cloud" style="animation-delay:${dly}s"><g transform="translate(${x} ${y}) scale(${s})" class="f-cloud" opacity=".55">
+      <ellipse cx="0" cy="0" rx="90" ry="16"/><ellipse cx="-34" cy="-12" rx="46" ry="16"/><ellipse cx="26" cy="-16" rx="52" ry="19"/></g></g>`;
+
+    let ripples = '';
+    for (let i = 0; i < 9; i++) {
+      ripples += `<ellipse class="ripple" cx="${(VB.x + r() * VB.w).toFixed(0)}" cy="${(385 + r() * 200).toFixed(0)}" rx="${(26 + r() * 40).toFixed(0)}" ry="3" fill="none" stroke="#fff" stroke-opacity=".32" style="--d:${(-r() * 7).toFixed(1)}s"/>`;
+    }
+
+    let glints = '';
+    for (let i = 0; i < 17; i++) glints += `<rect class="glint" rx="1.6" height="3.2" style="--d:${(-i * 0.35).toFixed(2)}s"/>`;
+
+    let reedMarkup = '';
+    const n = Math.max(6, Math.round(VB.w / 80));
+    for (let i = 0; i < n; i++) {
+      const x = VB.x + (i + 0.4) * (VB.w / n);
+      reedMarkup += reeds(x, 622 + Math.sin(i * 1.7) * 4, 4 + (i % 3), 40 + i);
+    }
+
+    const s = clamp(VB.w / 1200 * 1.05, 0.62, 1.05);
+    const lx = VB.x + VB.w * 0.11, rx = VB.x + VB.w * 0.9;
+
+    const A = { x: VB.x + VB.w * 0.17, y: 498 }, B = { x: VB.x + VB.w * 0.86, y: 506 }, C = { x: VB.x + VB.w * 0.5, y: 612 };
+    const bulbN = Math.max(8, Math.floor(VB.w / 46));
+    let bulbs = '';
+    for (let i = 0; i <= bulbN; i++) {
+      const t = i / bulbN, mt = 1 - t;
+      const x = mt * mt * A.x + 2 * mt * t * C.x + t * t * B.x;
+      const y = mt * mt * A.y + 2 * mt * t * C.y + t * t * B.y;
+      bulbs += `<circle cx="${x.toFixed(1)}" cy="${(y + 5).toFixed(1)}" r="17" fill="url(#glow)"/><circle cx="${x.toFixed(1)}" cy="${(y + 5).toFixed(1)}" r="4.2" fill="#ffe2a6"/>`;
+    }
+
+    const ps = VB.w < 700 ? 0.82 : 1;
+
+    svg.innerHTML = `
+    <defs>
+      <linearGradient id="sky" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="360"><stop offset="0" class="stop-s1"/><stop offset=".55" class="stop-s2"/><stop offset="1" class="stop-s3"/></linearGradient>
+      <linearGradient id="water" gradientUnits="userSpaceOnUse" x1="0" y1="350" x2="0" y2="640"><stop offset="0" class="stop-w1"/><stop offset="1" class="stop-w2"/></linearGradient>
+      <linearGradient id="lawn" gradientUnits="userSpaceOnUse" x1="0" y1="610" x2="0" y2="760"><stop offset="0" class="stop-l1"/><stop offset="1" class="stop-l2"/></linearGradient>
+      <linearGradient id="haze" gradientUnits="userSpaceOnUse" x1="0" y1="320" x2="0" y2="390"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      <radialGradient id="sunglow"><stop offset="0" class="stop-sun" stop-opacity=".85"/><stop offset=".35" class="stop-sun" stop-opacity=".28"/><stop offset="1" class="stop-sun" stop-opacity="0"/></radialGradient>
+      <radialGradient id="moonglow"><stop offset="0" stop-color="#dfe6ff" stop-opacity=".5"/><stop offset="1" stop-color="#dfe6ff" stop-opacity="0"/></radialGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#ffc766" stop-opacity=".95"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+      <radialGradient id="lawnglow"><stop offset="0" stop-color="#ffbf5e" stop-opacity=".5"/><stop offset="1" stop-color="#ffbf5e" stop-opacity="0"/></radialGradient>
+    </defs>
+
+    <rect x="${L}" y="-100" width="${R - L}" height="480" fill="url(#sky)"/>
+    <g id="stars">${stars}</g>
+    <g id="sun"><circle r="150" fill="url(#sunglow)"/><circle r="34" class="f-sun"/></g>
+    <g id="moon"><circle r="90" fill="url(#moonglow)"/><circle r="25" fill="#f2f0df"/><circle cx="-8" cy="-6" r="5" fill="#d8d5bd" opacity=".7"/><circle cx="9" cy="8" r="3.5" fill="#d8d5bd" opacity=".7"/><circle cx="6" cy="-11" r="2.5" fill="#d8d5bd" opacity=".6"/></g>
+    ${cloud(VB.x + VB.w * 0.28, 150, 1.1, 0)}${cloud(VB.x + VB.w * 0.7, 105, 0.8, -30)}${cloud(VB.x + VB.w * 0.52, 215, 0.6, -55)}
+
+    <path class="f-h1" d="M${L} 362L${L} 318C-450 296 -250 322 -80 312C100 302 220 286 420 304C600 318 720 292 900 306C1100 320 1300 290 1500 312C1640 324 1760 308 1900 314L1900 362Z"/>
+    <path class="f-h2" d="${treeline(L, R, 340, 5)}"/>
+    <rect x="${L}" y="350" width="${R - L}" height="300" fill="url(#water)"/>
+    <rect id="haze-r" x="${L}" y="320" width="${R - L}" height="70" fill="url(#haze)"/>
+    <g id="glints">${glints}</g>
+    <g id="ripples">${ripples}</g>
+
+    <g class="sc-boat" id="boat-g"><g class="boat-bob">
+      <ellipse cx="0" cy="18" rx="54" ry="5" fill="#000" opacity=".22"/>
+      <path class="f-tree" d="M-50 0L50 0L38 15L-40 15Z"/>
+      <path d="M-46 4L46 4" stroke="#f4efe0" stroke-width="2" opacity=".8"/>
+      <line class="s-tree" stroke-width="2.6" x1="-22" y1="0" x2="-22" y2="-30"/><line class="s-tree" stroke-width="2.6" x1="24" y1="0" x2="24" y2="-30"/>
+      <path class="f-tree" d="M-34 -30L36 -30L28 -40L-26 -40Z"/>
+      <g id="boat-lamp" opacity="0"><circle cx="0" cy="-22" r="22" fill="url(#glow)"/><circle cx="0" cy="-22" r="3.6" fill="#ffe2a6"/></g>
+    </g></g>
+
+    <path fill="url(#lawn)" d="M${L} 640C-300 610 0 628 300 618C600 608 900 634 1200 618C1500 604 1700 628 1900 620L1900 800L${L} 800Z"/>
+    <path fill="none" stroke="#d5be84" stroke-opacity=".55" stroke-width="3" d="M${L} 640C-300 610 0 628 300 618C600 608 900 634 1200 618C1500 604 1700 628 1900 620"/>
+    <ellipse id="lawnglow-e" cx="600" cy="664" rx="${Math.max(380, VB.w * 0.5)}" ry="64" fill="url(#lawnglow)" opacity="0"/>
+    ${reedMarkup}
+    ${acacia(lx, 648, s)}${acacia(rx, 652, s * 0.78)}
+    <path class="s-tree" fill="none" stroke-opacity=".7" stroke-width="1.6" d="M${A.x.toFixed(1)} ${A.y}Q${C.x.toFixed(1)} ${C.y} ${B.x.toFixed(1)} ${B.y}"/>
+    <g id="lights" opacity="0">${bulbs}</g>
+
+    <g id="crowd"><path id="crowd-a" class="f-tree" opacity=".7"/><path id="crowd-b" fill="#f4c06a" opacity=".9"/></g>
+    <g transform="translate(600 674) scale(${ps})">${propWedding()}${propParty()}${propCorporate()}${propPicnic()}</g>`;
+
+    parts = {
+      sun: $('sun'), moon: $('moon'), stars: $('stars'), lights: $('lights'), haze: $('haze-r'),
+      lawnglow: $('lawnglow-e'), boat: $('boat-g'), lamp: $('boat-lamp'),
+      glints: [...svg.querySelectorAll('.glint')],
+      gA: $('crowd-a'), gB: $('crowd-b'),
+    };
+  }
+
+  /* ---------- Rendering ---------- */
+  const VARS = ['s1', 's2', 's3', 'w1', 'w2', 'h1', 'h2', 'lawn', 'lawn2', 'tree', 'cloud', 'sun'];
+
+  function fmtTime(h) {
+    const hh = Math.floor(h), mm = Math.round((h - hh) * 60);
+    const h12 = hh % 12 === 0 ? 12 : hh % 12;
+    return `${h12}:${String(mm).padStart(2, '0')} ${hh >= 12 ? 'pm' : 'am'}`;
+  }
+
+  function moodFor(h) {
+    if (h < 7) return 'First light over the dam';
+    if (h < 11) return 'Bright morning on the lawn';
+    if (h < 15) return 'Midday sun, shade under the trees';
+    if (h < 17.5) return 'Soft afternoon light';
+    if (h < 18.8) return 'Golden hour, sunset on the water';
+    if (h < 20) return 'Dusk, the lanterns come on';
+    return 'Night, lanterns and stars';
+  }
+
+  function render() {
+    const h = state.hour, s = sample(h);
+    VARS.forEach((k) => svg.style.setProperty('--' + k, s[k]));
+    hero.style.backgroundColor = s.lawn2; // continues the lawn under the planner card
+
+    const t = (h - 6.4) / 12.3, tc = clamp(t, 0, 1);
+    let sx = VB.x + VB.w * (0.14 + 0.72 * tc);
+    let sy = 350 - Math.sin(Math.PI * tc) * 300;
+    if (t > 1) sy += (t - 1) * 600;
+    if (t < 0) sy += -t * 600;
+    parts.sun.setAttribute('transform', `translate(${sx.toFixed(1)} ${sy.toFixed(1)})`);
+    parts.sun.style.opacity = t > 1.12 || t < -0.12 ? 0 : 1;
+
+    const tm = clamp((h - 18.8) / 3.2, 0, 1), moonVis = clamp((h - 18.7) / 1.0, 0, 1);
+    const mx = VB.x + VB.w * (0.2 + 0.12 * tm), my = 360 - 280 * (1 - (1 - tm) * (1 - tm));
+    parts.moon.setAttribute('transform', `translate(${mx.toFixed(1)} ${my.toFixed(1)})`);
+    parts.moon.style.opacity = moonVis;
+
+    const sunPower = t > 1.02 ? 0 : clamp(Math.min((1.04 - t) / 0.06, 1), 0, 1) * clamp(0.45 + Math.sin(Math.PI * tc), 0, 1) * (t < 0 ? 0 : 1);
+    const useMoon = moonVis > 0 && sunPower < 0.05;
+    const srcX = useMoon ? mx : sx, power = useMoon ? moonVis * 0.55 : sunPower * 0.9;
+    parts.glints.forEach((g, i) => {
+      const w = 14 + i * 9;
+      g.setAttribute('x', (srcX - w / 2 + Math.sin(i * 2.3) * i * 1.4).toFixed(1));
+      g.setAttribute('y', (368 + i * 16.5).toFixed(1));
+      g.setAttribute('width', w.toFixed(1));
+      g.setAttribute('fill', useMoon ? '#e8ecff' : s.sun);
+      g.setAttribute('opacity', (power * (1 - i / 18)).toFixed(3));
+    });
+
+    parts.stars.style.opacity = s.stars;
+    parts.lights.setAttribute('opacity', s.lights.toFixed(3));
+    parts.lawnglow.setAttribute('opacity', (s.lights * 0.55).toFixed(3));
+    parts.lamp.setAttribute('opacity', s.lights.toFixed(3));
+    parts.haze.setAttribute('opacity', (0.6 * (1 - s.night)).toFixed(3));
+
+    const mood = moodFor(h);
+    el.timeOut.textContent = fmtTime(h);
+    el.mood.textContent = mood;
+    el.time.setAttribute('aria-valuetext', `${fmtTime(h)}, ${mood.toLowerCase()}`);
+    svg.setAttribute('aria-label', `Illustration of the garden and the dam: ${mood.toLowerCase()}`);
+    updateMessage();
+  }
+
+  function renderGuests() {
+    // Guests are small people: a head and a body. The same seeded positions are
+    // used every time, so moving the slider adds or removes people smoothly.
+    const r = mulberry32(99), pts = [];
+    for (let i = 0; i < 600; i++) pts.push({ x: VB.x + 26 + r() * (VB.w - 52), y: 646 + r() * 100, c: r() });
+    const shown = pts.slice(0, state.guests).sort((a, b) => a.y - b.y);
+    let a = '', b = '';
+    for (const p of shown) {
+      const sc = 0.5 + ((p.y - 646) / 100) * 0.95, u = 3.2 * sc;
+      const hr = u * 0.8, bw = u * 1.15, bh = u * 2.4, hy = p.y - bh - hr * 0.6;
+      const head = `M${(p.x - hr).toFixed(1)} ${hy.toFixed(1)}a${hr.toFixed(2)} ${hr.toFixed(2)} 0 1 0 ${(hr * 2).toFixed(2)} 0a${hr.toFixed(2)} ${hr.toFixed(2)} 0 1 0 ${(-hr * 2).toFixed(2)} 0`;
+      const body = `M${(p.x - bw).toFixed(1)} ${p.y.toFixed(1)}V${(p.y - bh + bw).toFixed(1)}A${bw.toFixed(2)} ${bw.toFixed(2)} 0 0 1 ${(p.x + bw).toFixed(1)} ${(p.y - bh + bw).toFixed(1)}V${p.y.toFixed(1)}Z`;
+      a += head;
+      if (p.c < 0.3) b += body; else a += body;
+    }
+    parts.gA.setAttribute('d', a);
+    parts.gB.setAttribute('d', b);
+    el.guestsOut.textContent = `${state.guests} guests`;
+  }
+
+  function renderProps() {
+    Object.keys(OCCASIONS).forEach((k) => {
+      const g = $('p-' + k);
+      if (g) g.classList.toggle('on', k === state.occasion);
+    });
+  }
+
+  function renderBoat(animate) {
+    const b = parts.boat;
+    b.style.transition = animate ? '' : 'none';
+    const pos = state.boat
+      ? { x: VB.x + VB.w * (VB.w < 700 ? 0.34 : 0.3), y: 592, s: 1.45 }
+      : { x: VB.x + VB.w * 0.68, y: 468, s: 0.9 };
+    b.style.transform = `translate(${pos.x.toFixed(1)}px, ${pos.y}px) scale(${pos.s})`;
+    if (!animate) { void b.getBoundingClientRect(); b.style.transition = ''; }
+  }
+
+  /* ---------- WhatsApp message ---------- */
+  function fmtDate(v) {
+    const d = new Date(v + 'T12:00:00');
+    return isNaN(d) ? v : d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  function buildMessage() {
+    const o = OCCASIONS[state.occasion];
+    let m = `Hello ${VENUE.name}, I'm planning a ${o.label} for about ${state.guests} guests`;
+    m += el.date.value ? ` on ${fmtDate(el.date.value)}` : ' (the date is not fixed yet)';
+    m += `, with the main moment around ${fmtTime(state.hour)}.`;
+    if (state.boat) m += ' I would also like to ask about guests arriving by boat.';
+    m += ' Is the date available, and what are your hire rates?';
+    const name = el.name.value.trim();
+    if (name) m += ` Thank you, ${name}.`;
+    return m;
+  }
+
+  function updateMessage() {
+    const m = buildMessage();
+    el.preview.textContent = m;
+    el.send.href = `https://wa.me/${VENUE.whatsapp}?text=${encodeURIComponent(m)}`;
+  }
+
+  /* ---------- Wire up ---------- */
+  let introRunning = !reduceMotion;
+  const stopIntro = () => { introRunning = false; };
+
+  function setupTimeTrack() {
+    const stops = [];
+    for (let h = 6; h <= 22; h += 1) stops.push(`${sample(h).s2} ${(((h - 6) / 16) * 100).toFixed(0)}%`);
+    el.time.style.setProperty('--track', `linear-gradient(90deg, ${stops.join(',')})`);
+  }
+
+  function init() {
+    setView();
+    buildScene();
+    setupTimeTrack();
+    el.time.value = state.hour;
+    el.guests.value = state.guests;
+    renderGuests(); renderProps(); renderBoat(false); render();
+  }
+
+  let resizeTimer;
+  let lastW = 0, lastH = 0;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const r = svg.getBoundingClientRect();
+      if (Math.abs(r.width - lastW) < 2 && Math.abs(r.height - lastH) < 60) return; // ignore mobile URL-bar jitter
+      lastW = r.width; lastH = r.height;
+      setView(); buildScene(); renderGuests(); renderProps(); renderBoat(false); render();
+    }, 160);
+  });
+
+  el.time.addEventListener('input', () => { stopIntro(); state.hour = parseFloat(el.time.value); render(); });
+  el.guests.addEventListener('input', () => { state.guests = parseInt(el.guests.value, 10); renderGuests(); updateMessage(); });
+  el.form.addEventListener('change', (e) => {
+    if (e.target.name === 'occasion') { state.occasion = e.target.value; renderProps(); }
+    if (e.target.id === 'boat') { state.boat = e.target.checked; renderBoat(true); }
+    updateMessage();
+  });
+  el.date.addEventListener('input', updateMessage);
+  el.name.addEventListener('input', updateMessage);
+  el.form.addEventListener('submit', (e) => e.preventDefault());
+
+  el.copy.addEventListener('click', async () => {
+    const text = buildMessage();
+    try { await navigator.clipboard.writeText(text); }
+    catch (_) {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (__) { /* ignore */ }
+      ta.remove();
+    }
+    el.copy.textContent = 'Message copied';
+    setTimeout(() => { el.copy.textContent = 'Copy message'; }, 2200);
+  });
+
+  $('seeBoat').addEventListener('click', () => {
+    el.boat.checked = true;
+    state.boat = true;
+    renderBoat(true); updateMessage();
+    $('top').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  });
+
+  $('ribbonClose').addEventListener('click', () => { $('ribbon').hidden = true; });
+
+  // Generic "ask the venue" links
+  const generic = `https://wa.me/${VENUE.whatsapp}?text=${encodeURIComponent(`Hello ${VENUE.name}, I saw your website and have a question about hiring the garden.`)}`;
+  document.querySelectorAll('[data-wa]').forEach((a) => { a.href = generic; });
+
+  init();
+  { const r = svg.getBoundingClientRect(); lastW = r.width; lastH = r.height; }
+
+  // One orchestrated moment on load: the day runs from morning to golden hour.
+  if (introRunning) {
+    const t0 = performance.now(), dur = 5600, from = 7, to = 17.9;
+    const tick = (now) => {
+      if (!introRunning) return;
+      const p = Math.min(1, (now - t0) / dur);
+      const e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+      state.hour = from + (to - from) * e;
+      el.time.value = state.hour;
+      render();
+      if (p < 1) requestAnimationFrame(tick); else introRunning = false;
+    };
+    requestAnimationFrame(tick);
+  }
+})();
+
+</script>
+</body>
+</html>
